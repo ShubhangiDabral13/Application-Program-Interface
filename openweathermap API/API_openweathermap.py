@@ -24,17 +24,24 @@ print(url)
 response = urllib.request.urlopen(url).read()
 parseresponse = json.loads(response)
 
-# "404", means city not  found otherwise,
-# city is been found
-if parseresponse["code"] != "404":
-    detail = {}
-    detail["name_city"] = parseresponse["name"]
-    detail["temperature"] = parseresponse['main']['temp']
-    detail["weather"] = parseresponse['weather'][0]['description']
 
-    #converting dictionary to Series
-    df = pd.Series(detail)
-    print(df)
+detail = {}
+detail["name_city"] = parseresponse["name"]
+detail["temperature"] = parseresponse['main']['temp']
+detail["weather"] = parseresponse['weather'][0]['description']
 
-else:
-    print("City Not found")
+#converting dictionary to Series
+df = pd.Series(detail)
+print(df)
+
+"""
+Input 1 :- Dehradun
+Output 1:-name_city        Dehradun
+          temperature        293.57
+          weather        light rain
+
+Input 2 :- Delhi
+Output 2:-name_city       Delhi
+          temperature    303.42
+          weather          haze
+"""          
