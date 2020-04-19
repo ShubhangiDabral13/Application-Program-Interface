@@ -21,13 +21,14 @@ url = api_endpoint + "?q=" + city + "&appid=" + apikey
 #print the url
 print(url)
 
+
 response = urllib.request.urlopen(url).read()
 parseresponse = json.loads(response)
 
 
 detail = {}
 detail["name_city"] = parseresponse["name"]
-detail["temperature"] = parseresponse['main']['temp']
+detail["temperature"] = (parseresponse['main']['temp'] - 273.15)
 detail["weather"] = parseresponse['weather'][0]['description']
 
 #converting dictionary to Series
@@ -35,13 +36,20 @@ df = pd.Series(detail)
 print(df)
 
 """
+Output for the day 19/04/2020
+
 Input 1 :- Dehradun
 Output 1:-name_city        Dehradun
-          temperature        293.57
-          weather        light rain
+          temperature        30.31
+          weather        clear sky
 
 Input 2 :- Delhi
 Output 2:-name_city       Delhi
-          temperature    303.42
+          temperature    31.57
           weather          haze
-"""          
+
+Input 3: - Chennai
+Output 3:-name_city               Chennai
+          temperature               33.28
+          weather        scattered clouds          
+"""
