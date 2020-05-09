@@ -33,10 +33,10 @@ def get_quote(url):
     return quote,author
 
 #Storing credentials within variables
-consumer_key = 'JUwlrJDma6bE274e3nmBchJQc'
-consumer_secret = 'W5bziwhdWZjUEiHMzY16dNanxsdpuLxcJ7vhizslHgTaiqBf9S'
-access_token = '1251774870121263104-GppJz4zIc4Z9kKYlLGAmLGNGJV25VV'
-access_token_secret = '5xJiQ2oUKzRI2L8a86e0HfwlP7SMQaLFk9iTc377WXuBI'
+consumer_key = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+consumer_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+access_token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+access_token_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 url = 'http://quotes.rest/qod.json?category=inspire'
 
 
