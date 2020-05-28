@@ -13,7 +13,7 @@ api_endpoint = "http://api.openweathermap.org/data/2.5/weather"
 city = input("Enter the city whose weather you need to find out")
 
 #Enter your API key here
-apikey = "8fadb93a7fca0bc168267f9af1777762"
+apikey = "enter your api key"
 
 # base_url variable to store url
 url = api_endpoint + "?q=" + city + "&appid=" + apikey
